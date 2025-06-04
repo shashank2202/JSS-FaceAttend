@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9fc;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+.react-calendar {
+    background-color: white;
+    color: black;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+  
+  .react-calendar__tile--now {
+    background: #00c49f33 !important;
+    border-radius: 8px;
+  }
+  
+  .react-calendar__tile--active {
+    background: #00C49F !important;
+    color: white !important;
+    border-radius: 8px;
+  }
