@@ -23,7 +23,7 @@ This project is a real-time facial recognition-based attendance system built usi
 |------------------|----------------------------------------|
 | Frontend         | React.js, Axios                        |
 | Backend          | FastAPI, Uvicorn, face_recognition     |
-| Camera Client    | Raspberry Pi + OpenCV + Python         |
+| Camera Client    | Raspberry Pi + OpenCV + Python + face_recognition         |
 | Database         | MongoDB Atlas                          |
 | Hosting          | AWS EC2 (Ubuntu 24.04) + Elastic IP    |
 
