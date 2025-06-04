@@ -8,11 +8,11 @@ This project is a real-time facial recognition-based attendance system built usi
 ## 🛠️ Project Structure
 
 ```
-├── face_attendance_backend/     # FastAPI backend
-├── raspberry_pi_client/         # Raspberry Pi face capture & upload
+├── backend/     # FastAPI backend
+├── pi/         # Raspberry Pi face capture & upload
 ├── face_attendance_frontend/    # React.js frontend
 ├── dataset/                     # Student images for training (temporary)
-└── encodings.pickle             # Face encodings (stored after training)
+└── encodings.pickle             # Face encodings (stored after extracting features)
 ```
 
 ---
@@ -37,7 +37,7 @@ This project is a real-time facial recognition-based attendance system built usi
 - 📆 Slot-wise attendance: Slot 1 (8:30–10:30), Slot 2 (11:00–1:30), Slot 3 (2:30–5:30)
 - 🌍 Timezone adjusted to IST
 - 🛡️ Duplicate prevention (per slot per day)
-- 🔍 ANN integration for faster face comparison (optional)
+- 🔍 ANN integration for faster face comparison
 - 🧾 View attendance records by date on frontend
 
 ---
@@ -59,18 +59,6 @@ This project is a real-time facial recognition-based attendance system built usi
 3. Start FastAPI server:
    ```bash
    uvicorn main:app --host 0.0.0.0 --port 5050
-   ```
-
-4. Make sure CORS is enabled in `main.py`:
-   ```python
-   from fastapi.middleware.cors import CORSMiddleware
-   app.add_middleware(
-       CORSMiddleware,
-       allow_origins=["*"],
-       allow_credentials=True,
-       allow_methods=["*"],
-       allow_headers=["*"],
-   )
    ```
 
 ---
